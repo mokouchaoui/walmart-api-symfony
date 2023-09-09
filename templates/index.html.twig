@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<div class="container py-4">
+    <div class="mb-3">
+        <a href="" class="btn btn-success"><i class="fas fa-plus"></i> Add Item</a>
+    </div>
+    {% if items is not empty %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">SKU</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">GTIN</th>
+                <th scope="col">Price</th>
+                <th scope="col">Published Status</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.sku }}</td>
+                <td>{{ item.productName|split(' ')|slice(0, 3)|join(' ') }}</td>
+                <td>{{ item.gtin }}</td>
+                <td>{{ item.price.amount ~ ' ' ~ item.price.currency }}</td>
+                <td>{{ item.publishedStatus }}</td>
+                <td>{{ item.lifecycleStatus }}</td>
+                <td>
+                    {% if item.id is defined %}
+                        <a href="{{ path('edit_item', {'id': item.id}) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="{{ path('delete_item', {'id': item.id}) }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="fas fa-trash"></i> Delete</a>
+                    {% else %}
+                        <!-- Handle items without an "id" key (if needed) -->
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-danger">No items found.</div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,3 +1,9 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+app_homepage:
+    path: /
+    controller: 'App\Controller\WalmartController::fetchItems'
+
+
+product_add:
+    path: /add_item
+    controller: App\Controller\ProductController::addItem
+    methods: ['POST', 'GET']

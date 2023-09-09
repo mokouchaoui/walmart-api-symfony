@@ -1,0 +1,22 @@
+{
+    "Orderable": {
+        "sku": "hd",
+        "productName": "hd",
+        "productIdentifiers": "hd",
+        "brand": "dh",
+        "price": "2",
+        "skuUpdate": "",
+        "shippingWeight": ""
+    },
+    "Visible": {
+        "jewelry": {
+            "shortDescription": "hd",
+            "gender": "",
+            "size": "",
+            "color": "",
+            "metal": "",
+            "mainImageUrl": "",
+            "productSecondaryImageURL": ""
+        }
+    }
+}
