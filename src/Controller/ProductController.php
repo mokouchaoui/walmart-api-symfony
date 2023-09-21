@@ -77,6 +77,7 @@ class ProductController extends AbstractController
 
                             // Add the feed ID to the success message
                             $this->addFlash('success', 'Item added successfully. Feed ID: ' . $responseContent);
+                            $this->addFlash('success', 'Access token: ' . $access_token);
                         
                     }
                 } else {

@@ -74,6 +74,7 @@ class WalmartController extends AbstractController
         }
 
         return $this->render('index.html.twig', [
+            'access_token' => $accessToken,
             'items' => $itemsData['ItemResponse'] ?? [],
         ]);
     }

@@ -1,16 +1,16 @@
 {
     "Orderable": {
-        "sku": "hd",
-        "productName": "hd",
-        "productIdentifiers": "hd",
-        "brand": "dh",
-        "price": "2",
+        "sku": "test",
+        "productName": "tes",
+        "productIdentifiers": "test",
+        "brand": "tes",
+        "price": "4",
         "skuUpdate": "",
         "shippingWeight": ""
     },
     "Visible": {
         "jewelry": {
-            "shortDescription": "hd",
+            "shortDescription": "tes",
             "gender": "",
             "size": "",
             "color": "",

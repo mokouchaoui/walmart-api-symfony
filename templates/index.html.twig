@@ -8,8 +8,14 @@
     <div class="mb-3">
         <a href="" class="btn btn-success"><i class="fas fa-plus"></i> Add Item</a>
     </div>
+
+    {% if access_token is defined %}
+    <div class="alert alert-success">{{ access_token }}</div>
+    {% endif %}
+
     {% if items is not empty %}
     <table class="table table-striped">
+
         <thead>
             <tr>
                 <th scope="col">SKU</th>
